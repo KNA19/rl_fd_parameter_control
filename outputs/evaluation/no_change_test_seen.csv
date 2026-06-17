@@ -1,0 +1,11 @@
+policy,episode,graph_id,family,size_label,initial_layout_score,final_layout_score,layout_score_improvement,total_reward,episode_length
+fixed::no_change,0,test_seen__erdos_renyi__small__idx0000__seed302026,erdos_renyi,small,0.4804604756935109,0.6822275500268365,0.20176707433332564,0.2669898293360092,5
+fixed::no_change,1,test_seen__erdos_renyi__small__idx0001__seed302027,erdos_renyi,small,0.548297949485319,0.6489679100779813,0.10066996059266231,0.1625667516004604,5
+fixed::no_change,2,test_seen__erdos_renyi__small__idx0002__seed302028,erdos_renyi,small,0.5169878254846625,0.6396724956955606,0.12268467021089813,0.18365191978045425,5
+fixed::no_change,3,test_seen__erdos_renyi__medium__idx0000__seed303026,erdos_renyi,medium,0.4993488811559301,0.6096793578059946,0.11033047665006446,0.168298412430664,5
+fixed::no_change,4,test_seen__erdos_renyi__medium__idx0001__seed303027,erdos_renyi,medium,0.4847434583950764,0.6340425896869469,0.14929913129187056,0.20970339026056528,5
+fixed::no_change,5,test_seen__erdos_renyi__medium__idx0002__seed303028,erdos_renyi,medium,0.5159594751629383,0.6079015638086563,0.09194208864571807,0.1497322450265837,5
+fixed::no_change,6,test_seen__barabasi_albert__small__idx0000__seed312026,barabasi_albert,small,0.48371950834861804,0.6066917948593635,0.12297228651074549,0.1806414659966818,5
+fixed::no_change,7,test_seen__barabasi_albert__small__idx0001__seed312027,barabasi_albert,small,0.501722929305717,0.6135588886630259,0.11183595935730883,0.17019184822361133,5
+fixed::no_change,8,test_seen__barabasi_albert__small__idx0002__seed312028,barabasi_albert,small,0.5624011954383917,0.6887165340535709,0.12631533861517918,0.1921869920205362,5
+fixed::no_change,9,test_seen__barabasi_albert__medium__idx0000__seed313026,barabasi_albert,medium,0.5026144166417018,0.6093732434277241,0.10675882678602233,0.16469615112879474,5

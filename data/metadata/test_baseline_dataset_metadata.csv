@@ -1,0 +1,5 @@
+graph_id,split,family,size_label,seed,n_requested,n,m,density,graph_path
+val__erdos_renyi__small__idx0000__seed1123,val,erdos_renyi,small,1123,15,15,23,0.21904762,data\processed\test_baseline_graphs\val\erdos_renyi\val__erdos_renyi__small__idx0000__seed1123.pkl
+val__erdos_renyi__small__idx0001__seed1124,val,erdos_renyi,small,1124,28,27,38,0.10826211,data\processed\test_baseline_graphs\val\erdos_renyi\val__erdos_renyi__small__idx0001__seed1124.pkl
+val__tree__small__idx0000__seed11123,val,tree,small,11123,14,14,13,0.14285714,data\processed\test_baseline_graphs\val\tree\val__tree__small__idx0000__seed11123.pkl
+val__tree__small__idx0001__seed11124,val,tree,small,11124,22,22,21,0.09090909,data\processed\test_baseline_graphs\val\tree\val__tree__small__idx0001__seed11124.pkl

@@ -1,0 +1,4 @@
+policy,graph_id,family,size_label,n,m,initial_score,final_score,improvement,total_reward,actions
+no_change,val__erdos_renyi__small__idx0000__seed1123,erdos_renyi,small,15,23,0.5307130212470448,0.6876686876689183,0.15695566642187353,0.22572253518876548,no_change | no_change | no_change
+random,val__erdos_renyi__small__idx0000__seed1123,erdos_renyi,small,15,23,0.5307130212470448,0.6513679878567732,0.12065496660972841,0.1827917653954057,expand_and_stabilize | reset_k_to_default | large_increase_temperature
+fixed::large_decrease_k,val__erdos_renyi__small__idx0000__seed1123,erdos_renyi,small,15,23,0.5307130212470448,0.662352264375715,0.13163924312867026,0.1948744695662418,large_decrease_k | large_decrease_k | large_decrease_k

@@ -1,0 +1,7 @@
+graph_id,split,family,size_label,seed,n_requested,n,m,density,graph_path
+train__erdos_renyi__small__idx0000__seed1123,train,erdos_renyi,small,1123,15,15,23,0.21904762,data\processed\test_ppo_graphs\train\erdos_renyi\train__erdos_renyi__small__idx0000__seed1123.pkl
+train__erdos_renyi__small__idx0001__seed1124,train,erdos_renyi,small,1124,28,27,38,0.10826211,data\processed\test_ppo_graphs\train\erdos_renyi\train__erdos_renyi__small__idx0001__seed1124.pkl
+train__tree__small__idx0000__seed11123,train,tree,small,11123,14,14,13,0.14285714,data\processed\test_ppo_graphs\train\tree\train__tree__small__idx0000__seed11123.pkl
+train__tree__small__idx0001__seed11124,train,tree,small,11124,22,22,21,0.09090909,data\processed\test_ppo_graphs\train\tree\train__tree__small__idx0001__seed11124.pkl
+val__erdos_renyi__small__idx0000__seed2123,val,erdos_renyi,small,2123,29,29,44,0.10837438,data\processed\test_ppo_graphs\val\erdos_renyi\val__erdos_renyi__small__idx0000__seed2123.pkl
+val__tree__small__idx0000__seed12123,val,tree,small,12123,17,17,16,0.11764706,data\processed\test_ppo_graphs\val\tree\val__tree__small__idx0000__seed12123.pkl
