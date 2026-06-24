@@ -1,3 +1,3 @@
-episode,graph_id,family,size_label,initial_layout_score,final_layout_score,layout_score_improvement,total_reward,episode_length
-0,val__erdos_renyi__small__idx0000__seed2123,erdos_renyi,small,0.5388567835927146,0.6488020434089965,0.10994525981628189,0.17182546415718158,3
-1,val__tree__small__idx0000__seed12123,tree,small,0.5836014023507682,0.7895811148956599,0.20597971254489167,0.2819378240344577,3
+policy,episode,graph_id,family,size_label,initial_layout_score,final_layout_score,layout_score_improvement,total_reward,episode_length
+ppo,0,val__erdos_renyi__small__idx0000__seed2123,erdos_renyi,small,0.5388567835927146,0.6488020434089965,0.10994525981628189,0.17182546415718158,3
+ppo,1,val__tree__small__idx0000__seed12123,tree,small,0.5836014023507682,0.7895811148956599,0.20597971254489167,0.2819378240344577,3
