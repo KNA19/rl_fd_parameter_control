@@ -264,6 +264,10 @@ def _pure_fr_coupled_actions(
 
     These actions still do not move nodes directly.
     They only modify Pure FR parameters.
+
+    Note:
+        reset_k_to_default is not included here because generic reset actions
+        are already created for every parameter.
     """
     return [
         ActionSpec(
@@ -358,17 +362,6 @@ def _pure_fr_coupled_actions(
                     parameter_name="cooling_rate",
                     operation_type="add",
                     value=-0.01,
-                ),
-            ),
-        ),
-        ActionSpec(
-            action_id=start_id + 5,
-            name="reset_k_to_default",
-            description="Reset Pure FR ideal distance k to its default value.",
-            operations=(
-                ParameterOperation(
-                    parameter_name="k",
-                    operation_type="reset",
                 ),
             ),
         ),

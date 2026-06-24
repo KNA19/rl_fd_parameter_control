@@ -1,11 +1,22 @@
-algorithm: Fruchterman-Reingold
-state: full
-action space: pure_fr_multiscale
-reward: aesthetic_delta
-layout_scale: 1.0
-max_macro_steps: 5
-iterations_per_step: 20
-training timesteps: 50,000 or 100,000
-training seeds: 2026, 2027, 2028
-evaluation splits: val, test_seen, test_unseen_size, test_unseen_family
-baselines: no_change, random, fixed large_decrease_k
+# FR-Only SARL Experiment Setting
+
+## Purpose
+
+This document freezes the experimental setting for the Fruchterman-Reingold-only SARL parameter-control experiments.
+
+## Algorithm
+
+Fruchterman-Reingold force-directed layout.
+
+## RL Agent
+
+Single-agent PPO.
+
+The agent controls algorithm parameters only. It does not directly move graph nodes.
+
+## State
+
+Full state:
+
+```text
+s_t = [G_h, G_e, P_t, A_t, ΔA_t, D_t, C_t, H_t]
