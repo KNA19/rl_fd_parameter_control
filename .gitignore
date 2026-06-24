@@ -6,5 +6,8 @@ outputs/
 data/processed/
 data/metadata/test_*
 
+outputs/
+archived_results/
+
 .DS_Store
 .vscode/
