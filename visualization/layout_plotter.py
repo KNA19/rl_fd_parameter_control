@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from collections import Counter
 from pathlib import Path
+from textwrap import fill
 from typing import List, Mapping
 
 import matplotlib
@@ -22,13 +23,15 @@ PositionDict = Mapping[object, np.ndarray]
 def plot_policy_comparison(
     results: List[PolicyLayoutRunResult],
     output_path: str,
-    title: str = "Policy Layout Comparison",
+    title: str = "Policy layout comparison",
 ) -> None:
     """
     Plot initial layout and final layouts from multiple policies.
 
-    The first panel is the initial layout.
-    Each next panel is one policy result.
+    This version is designed to avoid text overlap:
+        - main title is placed at the top
+        - subplot titles are short
+        - action summaries are placed below each subplot
     """
     if not results:
         raise ValueError("At least one result is required for plotting.")
@@ -40,17 +43,32 @@ def plot_policy_comparison(
 
     num_panels = 1 + len(results)
 
-    fig_width = max(5.0 * num_panels, 12.0)
-    fig_height = 5.5
+    fig_width = max(4.6 * num_panels, 16.0)
+    fig_height = 6.8
 
     fig, axes = plt.subplots(
         1,
         num_panels,
         figsize=(fig_width, fig_height),
         squeeze=False,
+        constrained_layout=False,
     )
 
     axes_row = axes[0]
+
+    graph_info = (
+        f"Graph: {reference.graph_id} | "
+        f"Family: {reference.family} | "
+        f"Size: {reference.size_label} | "
+        f"n={reference.graph.number_of_nodes()}, "
+        f"m={reference.graph.number_of_edges()}"
+    )
+
+    fig.suptitle(
+        f"{title}\n{graph_info}",
+        fontsize=12,
+        y=0.98,
+    )
 
     _draw_graph_layout(
         axis=axes_row[0],
@@ -62,14 +80,16 @@ def plot_policy_comparison(
         ),
     )
 
-    for index, result in enumerate(results, start=1):
-        action_summary = _summarize_actions(result.action_sequence)
+    _add_bottom_text(
+        axis=axes_row[0],
+        text="",
+    )
 
+    for index, result in enumerate(results, start=1):
         panel_title = (
             f"{result.policy_name}\n"
             f"final={result.final_score:.4f}, "
-            f"Δ={result.improvement:+.4f}\n"
-            f"{action_summary}"
+            f"Δ={result.improvement:+.4f}"
         )
 
         _draw_graph_layout(
@@ -79,19 +99,20 @@ def plot_policy_comparison(
             title_text=panel_title,
         )
 
-    graph_info = (
-        f"{title}\n"
-        f"Graph: {reference.graph_id} | "
-        f"Family: {reference.family} | "
-        f"Size: {reference.size_label} | "
-        f"n={reference.graph.number_of_nodes()}, "
-        f"m={reference.graph.number_of_edges()}"
+        _add_bottom_text(
+            axis=axes_row[index],
+            text=_summarize_actions(result.action_sequence),
+        )
+
+    fig.subplots_adjust(
+        left=0.02,
+        right=0.98,
+        top=0.76,
+        bottom=0.18,
+        wspace=0.22,
     )
 
-    fig.suptitle(graph_info, fontsize=12)
-
-    plt.tight_layout()
-    fig.savefig(output_file, dpi=200, bbox_inches="tight")
+    fig.savefig(output_file, dpi=220, bbox_inches="tight")
     plt.close(fig)
 
     print(f"Saved visual comparison to: {output_file}")
@@ -106,7 +127,7 @@ def _draw_graph_layout(
     """
     Draw one graph layout on one Matplotlib axis.
     """
-    axis.set_title(title_text, fontsize=9)
+    axis.set_title(title_text, fontsize=9, pad=10)
     axis.set_aspect("equal", adjustable="box")
     axis.axis("off")
 
@@ -123,7 +144,7 @@ def _draw_graph_layout(
         pos=pos_2d,
         ax=axis,
         width=0.8,
-        alpha=0.6,
+        alpha=0.65,
     )
 
     nx.draw_networkx_nodes(
@@ -138,6 +159,29 @@ def _draw_graph_layout(
     _set_equal_axis_limits(
         axis=axis,
         positions=pos_2d,
+    )
+
+
+def _add_bottom_text(
+    axis: Axes,
+    text: str,
+) -> None:
+    """
+    Add wrapped action text below each subplot.
+    """
+    if not text:
+        return
+
+    wrapped_text = fill(text, width=34)
+
+    axis.text(
+        0.5,
+        -0.12,
+        wrapped_text,
+        transform=axis.transAxes,
+        ha="center",
+        va="top",
+        fontsize=7,
     )
 
 
@@ -166,7 +210,7 @@ def _set_equal_axis_limits(
     x_center = 0.5 * (x_min + x_max)
     y_center = 0.5 * (y_min + y_max)
 
-    padding = 0.15 * span
+    padding = 0.18 * span
 
     axis.set_xlim(
         x_center - 0.5 * span - padding,
@@ -181,10 +225,10 @@ def _set_equal_axis_limits(
 
 def _summarize_actions(
     action_sequence: List[str],
-    max_items: int = 2,
+    max_items: int = 3,
 ) -> str:
     """
-    Return compact action summary for subplot title.
+    Return compact action summary for figure annotation.
     """
     if not action_sequence:
         return "actions: none"
