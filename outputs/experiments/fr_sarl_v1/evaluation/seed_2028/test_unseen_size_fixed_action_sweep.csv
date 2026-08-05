@@ -1,0 +1,22 @@
+policy,split,num_episodes,mean_total_reward,mean_initial_layout_score,mean_final_layout_score,mean_layout_score_improvement,mean_episode_length,action_counts
+fixed::no_change,test_unseen_size,30,0.18808125070401738,0.5028412667710249,0.6485002310572685,0.1456589642862437,5.0,{'no_change': 150}
+fixed::small_increase_k,test_unseen_size,30,0.18288569279297967,0.5028412667710249,0.6511162553201718,0.14827498854914703,5.0,{'small_increase_k': 150}
+fixed::small_decrease_k,test_unseen_size,30,0.18561007552052444,0.5028412667710249,0.6460544846068833,0.1432132178358584,5.0,{'small_decrease_k': 150}
+fixed::large_increase_k,test_unseen_size,30,0.17284140184718874,0.5028412667710249,0.6510179466097966,0.14817667983877167,5.0,{'large_increase_k': 150}
+fixed::large_decrease_k,test_unseen_size,30,0.18663381613076085,0.5028412667710249,0.6343091550833645,0.13146788831233958,5.0,{'large_decrease_k': 150}
+fixed::small_increase_temperature,test_unseen_size,30,0.179415028651597,0.5028412667710249,0.6484872486542191,0.14564598188319428,5.0,{'small_increase_temperature': 150}
+fixed::small_decrease_temperature,test_unseen_size,30,0.1862343468679837,0.5028412667710249,0.6473039543412775,0.14446268757025257,5.0,{'small_decrease_temperature': 150}
+fixed::large_increase_temperature,test_unseen_size,30,0.1663707297568369,0.5028412667710249,0.6471787970434548,0.14433753027242985,5.0,{'large_increase_temperature': 150}
+fixed::large_decrease_temperature,test_unseen_size,30,0.19423482234629644,0.5028412667710249,0.6446002614976744,0.14175899472664952,5.0,{'large_decrease_temperature': 150}
+fixed::small_increase_cooling_rate,test_unseen_size,30,0.16655594962118334,0.5028412667710249,0.650104072811845,0.14726280604082004,5.0,{'small_increase_cooling_rate': 150}
+fixed::small_decrease_cooling_rate,test_unseen_size,30,0.19119301861450008,0.5028412667710249,0.6462374051844406,0.14339613841341578,5.0,{'small_decrease_cooling_rate': 150}
+fixed::large_increase_cooling_rate,test_unseen_size,30,0.13805280386677019,0.5028412667710249,0.6231065598415263,0.12026529307050143,5.0,{'large_increase_cooling_rate': 150}
+fixed::large_decrease_cooling_rate,test_unseen_size,30,0.19123222116960126,0.5028412667710249,0.6382486254005691,0.1354073586295443,5.0,{'large_decrease_cooling_rate': 150}
+fixed::reset_k_to_default,test_unseen_size,30,0.18808125070401738,0.5028412667710249,0.6485002310572685,0.1456589642862437,5.0,{'reset_k_to_default': 150}
+fixed::reset_temperature_to_default,test_unseen_size,30,0.15361823222230742,0.5028412667710249,0.6414079943236559,0.13856672755263116,5.0,{'reset_temperature_to_default': 150}
+fixed::reset_cooling_rate_to_default,test_unseen_size,30,0.18808125070401738,0.5028412667710249,0.6485002310572685,0.1456589642862437,5.0,{'reset_cooling_rate_to_default': 150}
+fixed::expand_and_explore,test_unseen_size,30,0.16773206639368907,0.5028412667710249,0.6515333929680878,0.14869212619706298,5.0,{'expand_and_explore': 150}
+fixed::expand_and_stabilize,test_unseen_size,30,0.18738579669304273,0.5028412667710249,0.6490257530884759,0.14618448631745107,5.0,{'expand_and_stabilize': 150}
+fixed::compress_and_stabilize,test_unseen_size,30,0.18996987122502113,0.5028412667710249,0.6442421973987585,0.14140093062773365,5.0,{'compress_and_stabilize': 150}
+fixed::reheat_layout,test_unseen_size,30,0.13457066263027298,0.5028412667710249,0.6269727296658245,0.12413146289479969,5.0,{'reheat_layout': 150}
+fixed::cool_down_layout,test_unseen_size,30,0.19018721254336565,0.5028412667710249,0.6372986175585369,0.134457350787512,5.0,{'cool_down_layout': 150}

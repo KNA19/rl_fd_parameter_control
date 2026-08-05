@@ -1,0 +1,5 @@
+split,num_seeds,total_actions,unique_actions_used,top_action,top_action_count,top_action_share,normalized_entropy,effective_number_of_actions
+val,5,750,17,large_increase_k,312,0.416,0.6599552031082774,7.45771020265786
+test_seen,5,750,17,large_increase_k,314,0.4186666666666667,0.6621721935912517,7.508217602268011
+test_unseen_size,5,750,16,large_increase_k,366,0.488,0.6050545583681415,6.309788633971382
+test_unseen_family,5,750,13,large_increase_k,279,0.372,0.5045788487203614,4.646906022006334

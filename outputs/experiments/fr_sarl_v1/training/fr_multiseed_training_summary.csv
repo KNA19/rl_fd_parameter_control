@@ -1,0 +1,6 @@
+seed,status,model_path,total_timesteps,observation_dim,num_actions,training_split,training_time_seconds
+2026,trained,outputs\experiments\fr_sarl_v1\models\fr_ppo_seed_2026.zip,100000,145,21,train,9190.541154384613
+2027,trained,outputs\experiments\fr_sarl_v1\models\fr_ppo_seed_2027.zip,100000,145,21,train,9157.184011936188
+2028,trained,outputs\experiments\fr_sarl_v1\models\fr_ppo_seed_2028.zip,100000,145,21,train,10238.423972845078
+2029,trained,outputs\experiments\fr_sarl_v1\models\fr_ppo_seed_2029.zip,100000,145,21,train,9430.232091665268
+2030,trained,outputs\experiments\fr_sarl_v1\models\fr_ppo_seed_2030.zip,100000,145,21,train,9375.04348897934

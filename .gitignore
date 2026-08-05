@@ -2,11 +2,9 @@
 __pycache__/
 *.pyc
 
-outputs/
 data/processed/
 data/metadata/test_*
 
-outputs/
 archived_results/
 
 .DS_Store
