@@ -441,7 +441,7 @@ def generate_figure4_combined_test_visual_grid() -> None:
     seed = FR_EXPERIMENT_SETTING.training_seeds[0]
 
     # You can change this to 1 or 2 if a different graph looks better.
-    graph_index = 5
+    graph_index = 6
 
     split_results = collect_visual_grid_results(
         seed=seed,
