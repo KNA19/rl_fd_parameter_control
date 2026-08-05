@@ -1,0 +1,4 @@
+split,large_increase_k,no_change,reset_cooling_rate_to_default,reset_temperature_to_default,small_decrease_k,small_increase_cooling_rate,Other
+test_seen,41.866667,14.266667,10.133333,8.266667,4.533333,2.133333,18.800000
+test_unseen_size,48.800000,10.400000,10.533333,7.600000,5.200000,0.533333,16.933333
+test_unseen_family,37.200000,29.466667,19.200000,1.466667,7.333333,2.800000,2.533333
